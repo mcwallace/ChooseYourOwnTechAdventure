@@ -1,0 +1,92 @@
+@import url(http://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
+/* Defaults */
+html, body, #quizzie {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+  background: #677c8a;
+  color: #fff;
+}
+h1 {
+  font-family: 'Satisfy', 'cursive';
+  font-size: 2.5em;
+}
+h2,p {
+  font-family: 'Pathway Gothic One', 'sans-serif';
+  font-size: 2em;
+}
+h1,h2,p {
+    text-align: center;
+    display: block;
+    width: auto;
+    margin: 1%;
+}
+#quizzie {
+  padding: 5% 0;
+  /* Individual Steps/Sections */
+  ul {
+      list-style: none;
+      display: block;
+      width: auto;
+      margin: 2% 2%;
+      padding: 2%;
+      overflow: auto;
+      display:none;
+    &.current {
+      display: block;
+    }
+    
+    /* Step Questions and Answer Options */
+    li {
+        display: inline-block;
+        float: left;
+        width: 49%;
+        margin-right: 2%;
+        overflow: auto;
+        text-align: center;
+      &.quiz-answer {
+          cursor: pointer;
+      }
+      &.question {
+          display: block;
+          float: none;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          margin-bottom: 2%;
+      }
+      &.results-inner {
+          @extend .question;
+          padding: 5% 2%;
+          img {
+              width: 250px;
+          }
+      }
+    }
+    li:last-child {
+        margin-right: 0;
+    }
+  }
+  
+  /* Content */
+  .question-wrap {
+      display: block;
+      padding: 1%;
+      margin: 1em 10%;
+      @include border-radius(10px);
+  }
+  .answer-wrap {
+      @extend .question-wrap;
+      background: Turquoise;
+      @include transition(background-color 0.5s ease);
+      &:hover {
+        background: DarkTurquoise;
+      }
+  }
+}
