@@ -162,6 +162,11 @@ function calcResults(totalScore) {
             increment = '',
             n = 0; //increment index
         // incrementally increase the possible score, starting at the minScore, until totalScore falls into range. then match that increment index (number of times it took to get totalScore into range) and return the corresponding index results from resultOptions object
+        var m = compare_results(ans_array);
+                console.log(m); 
+
+
+      
         while (n < numResults) {
             increment = minScore + (interval * n);
             if (totalScore <= increment) {
@@ -178,36 +183,39 @@ function calcResults(totalScore) {
 }
 
 function compare_results(answer) {
-    //compares the answer traits to jobs we have
-    console.log(answer) ;
+    var returned = 0 ;
   for(var i = 0 ; i < results_arr.length ; i ++  ){
-        var arr = results_arr[i] ; 
-        console.log(arr) ;  
+        var arr = results_arr[i] ;  
         if( arr == answer ) {
             var j = results_arr.indexOf(arr) ; 
+            returned = 1 ; 
             return career_map[j] ; 
         } else {
-            return other_results(answer) ; 
+            
         }
     }
+    if(returned == 0){
+       return other_results(answer) ;
+       } 
 }
 
 function other_results(answer) {
-    var maybe_list = ""; 
+    var maybe_list = [0]; 
     for(var i=0; i < results_arr.length ; i++) {
         var arr = results_arr[i] ; 
         var maybe_this = 1 ; 
         for(j=0; j < arr.length ; j ++) {
             if(arr[j] > answer[j]) {
                 maybe_this -= 1 ;
-                console.log 
             }
         }
         if(maybe_this > 0) {
             var k = results_arr.indexOf(arr);
-            maybe_list = maybe_list + " " + career_map[k] + "," ;
+            maybe_list.push(k);
         }
     }
-    return maybe_list ; 
+    return maybe_list[-1] ; 
 }
+
+    
 
