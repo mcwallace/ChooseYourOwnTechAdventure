@@ -12,17 +12,59 @@ var results_arr = [
                 ];
 
 var resultOptions = [
-    {   title: 'You Are This Thing',
-        desc: '<p>Here, have an Archer</p><img src="http://i.imgur.com/tXTjD9k.jpg"/>'},
-    {   title: 'You Are That Thing',
-        desc: '<p>Here, have an Archer</p><img src="http://i.imgur.com/dipkE0v.jpg"/>'},
-    {   title: 'You Are This Other Thing',
-        desc: '<p>Here, have an Archer</p><img src="http://i.imgur.com/WXox0Yv.jpg"/>'},
-    {   title: 'You Are This One Thing',
-        desc: '<p>Here, have an Archer</p><img src="http://i.imgur.com/NH5cunw.png"/>'},
-    {   title: 'You Are A Type Of Thing',
-        desc: '<p>Here, have an Archer</p><img src="http://i.imgur.com/NH5cunw.png"/>'}
+    {   title: "Frontend Developer",
+        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
+        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
+        cons: "You'll have to interact with clients."
+    },
+    {   title: "Frontend Developer",
+        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
+        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
+        cons: "You'll have to interact with clients."
+    },
+    {   title: "Frontend Developer",
+        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
+        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
+        cons: "You'll have to interact with clients."
+    },
+    {   title: "Frontend Developer",
+        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
+        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
+        cons: "You'll have to interact with clients."
+    },
+    {   title: "Frontend Developer",
+        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
+        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
+        cons: "You'll have to interact with clients."
+    },
+    {   title: "Frontend Developer",
+        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
+        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
+        cons: "You'll have to interact with clients."
+    },
+    {   title: "Frontend Developer",
+        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
+        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
+        cons: "You'll have to interact with clients."
+    },
+    {   title: "Frontend Developer",
+        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
+        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
+        cons: "You'll have to interact with clients."
+    },
+    {   title: "Frontend Developer",
+        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
+        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
+        cons: "You'll have to interact with clients."
+    },
+    {   title: "Frontend Developer",
+        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
+        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
+        cons: "You'll have to interact with clients."
+    },
 ];
+
+
 
 var ans_array = [5, 5, 5, 5] ; 
     
@@ -118,7 +160,7 @@ function calcResults(totalScore) {
             if (totalScore <= increment) {
                 // populate results
                 resultsTitle.replaceWith("<h1>" + resultOptions[n].title + "</h1>");
-                resultsDesc.replaceWith("<p class='desc'>" + resultOptions[n].desc + "</p>" + "<p>" + ans_array + compare_results([2,4,2,1]) + "</p>");
+                resultsDesc.replaceWith("<p class='desc'>" + resultOptions[n].desc + "</p>" + "<p>" + compare_results([2,4,2,1]) + "</p>");
               
                 return;
             } else {
