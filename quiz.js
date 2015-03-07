@@ -1,66 +1,73 @@
 // Quiz result options in a separate object for flexibility
-var index_map = {   games : 0,
-                    frontend : 1,
-                    backend : 2 
+var index_map = {   software : 0,
+                    backend : 1,
+                    frontend : 2, 
+                    games : 3,
+                    ux : 4,
+                    apps : 5,
+                    projman : 6,
+                    sysadmin : 7,
+                    nottech : 8
                 };
-var career_map = ["games","frontend", "backend"];
+var career_map = ["Software Engineer","Backend Developer", "Frontend Developer", "Game Developer", "UX/UI Designer", "App Developer", "Project Manager", "System Administrator", "Non-Tech Job"];
 
 var results_arr = [
-                [3, 5, 4, 1], 
+                [2, 5, 2, 1], 
+                [2, 4, 2, 1],
                 [2, 1, 5, 4],
-                [2, 4, 2, 1]
+                [3, 5, 4, 1],
+                [3, 1, 5, 4],
+                [2, 5, 5, 2],
+                [5, 3, 2, 5],
+                [1, 4, 2, 1],
+                [4, 1, 2, 4]
                 ];
 
 var resultOptions = [
-    {   title: "Frontend Developer",
-        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
-        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
-        cons: "You'll have to interact with clients."
+    {   title: "Software Engineer",
+        desc: "These are tools for making other tools! Software is huge and slick and complicated. Hope you're prepared to keep updating this for months or years. The work is very focused and you'll spend a lot of time staring at your computer screen.",
+        pros: "There is a huge variation of projects: for example, you can work on operating systems, programming languages, or physics rendering engines -- on your own or as part of a team.",
+        cons: "This is probably the most difficult field to get started in, out of all the options."
+    },
+    {   title: "Backend Developer",
+        desc: "Backend development involves setting up databases and figuring out how to best manipulate your data to create websites and applications.",
+        pros: "You have to work with your development team, but thankfully not clients. You'll have loads of problem-solving opportunities.",
+        cons: "Your work isn't seen or appreciated by the client, and you don't get to create a lot of 'pretty' things."
     },
     {   title: "Frontend Developer",
         desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
         pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
         cons: "You'll have to interact with clients."
     },
-    {   title: "Frontend Developer",
-        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
-        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
-        cons: "You'll have to interact with clients."
+    {   title: "Game Developer",
+        desc: "Game development actually takes more work than you might think. It involves tons of logic. The computing power needed ranks up there with most scientific endeavors (so get a very good computer). This field is at the forefront of animation as well; it's less pretty than movies but more complicated.",
+        pros: "You're making games. There's lots of problem solving and lots of creativity. It's easy to explain what you do, and you don't have to deal with clients if you don't want to.",
+        cons: "It takes years to develop a good game. The culture can be hostile to female developers. Employment and income can be unstable."
     },
-    {   title: "Frontend Developer",
-        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
-        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
-        cons: "You'll have to interact with clients."
+    {   title: "UX/UI Designer",
+        desc: "Developers don't like making interfaces. You do. Take their (probably ugly) output and make something that users will not only use, but will WANT to use.",
+        pros: "You don't have to deal with a lot of code, and your work can be very pretty.",
+        cons: "You'll have to interact with clients and developers."
     },
-    {   title: "Frontend Developer",
-        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
-        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
-        cons: "You'll have to interact with clients."
+    {   title: "App Developer",
+        desc: "This field is new and exciting and changes faster than you can blink, so you're quick to adapt and make snarly projects that Work Well Enough (I'll patch it soon promise). You're making mini-software used by many people. You'll need a large variety of skills (or a team). There's lots of variety here, based on what type of app you want to make. Please also browse our entries for software design, UI design, backend web development or games.",
+        pros: "Everyone uses and loves apps. You could build an entire company around a single app if you wanted. There is tons of room for growth, as this is a new medium.",
+        cons: "Everyone can make apps, so there's lots of competition. You'd better have a really good idea.  This is a field where you need to keep up with emerging developments in mobile tech."
     },
-    {   title: "Frontend Developer",
-        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
-        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
-        cons: "You'll have to interact with clients."
+    {   title: "Project Manager",
+        desc: "There's not a lot of actual coding, so you'll need to know more theory than skills. For large projects, though, you're incredibly important because you'll be organizing the code monkeys (developers) and ensuring on-time delivery. You focus on the big picture but keep your eye on the deadlines. You're good at nuturing relationships with clients.",
+        pros: "You can make big bucks without having really in-depth tech skills.",
+        cons: "You don't really get to code. It's more of a manager job than a tech job."
     },
-    {   title: "Frontend Developer",
-        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
-        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
-        cons: "You'll have to interact with clients."
+    {   title: "System Administrator",
+        desc: "You deal with servers and databases: basically system maintenance. There's not much programming. A lot of command-line work, though. You're going to learn to love Linux and this thing [insert picture of command line shell].",
+        pros: "You need to be very technical and detail-oriented, but you don't have to spend a lot of time actually writing code.",
+        cons: "Sometimes people wake you up at 5 AM because the servers got hacked/caught on fire. (In other words, you're on call 24/7.)"
     },
-    {   title: "Frontend Developer",
-        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
-        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
-        cons: "You'll have to interact with clients."
-    },
-    {   title: "Frontend Developer",
-        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
-        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
-        cons: "You'll have to interact with clients."
-    },
-    {   title: "Frontend Developer",
-        desc: "Frontend developers work with Javascript, HTML, and CSS to make the wireframe created by the backend developers palettable to human eyes and hands. It's similar to UX/UI.",
-        pros: "You'll be working heavily with your team of developers, as well as your clients. There's incredible opportunity for creativity in this field, and your work is seen by clients and customers.",
-        cons: "You'll have to interact with clients."
+    {   title: "Non-Tech Job",
+        desc: "The majority of companies can benefit from people who like tech but know other things. Maybe you don't want to spend all your time coding, but you can still make simple tools or even a website. You can do amazing things with the Microsoft Office Suite (or some equivalent).",
+        pros: "",
+        cons: ""
     },
 ];
 
