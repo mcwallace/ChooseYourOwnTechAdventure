@@ -1,5 +1,4 @@
 // Quiz result options in a separate object for flexibility
-<script type="text/javascript">
 
 var index_map = {   software : 0,
                     backend : 1,
@@ -228,5 +227,4 @@ function other_results(answer) {
     return maybe_list[-1] ; 
 }
 
-</script>
 
